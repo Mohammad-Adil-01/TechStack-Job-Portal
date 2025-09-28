@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="practiceAWDPracticals.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+
+            <br />
+            <asp:HyperLink ID="HyperLink1" runat="server">Home</asp:HyperLink>
+            <br />
+            <asp:HyperLink ID="HyperLink2" runat="server">Menu</asp:HyperLink>
+
+
+
+            <br />
+            <br />
+            <br />
+            <br />
+
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                <p>
+                </p>
+
+            </asp:ContentPlaceHolder>
+
+            <br />
+            <br />
+            &amp;copy All right are Reserved - Fresh Cart.Com 2025</div>
+    </form>
+</body>
+</html>

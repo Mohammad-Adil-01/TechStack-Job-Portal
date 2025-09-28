@@ -1,0 +1,87 @@
+﻿/* Using the established professional color scheme */
+:root {
+    --primary-color: #008080; /* Deep Teal */
+    --secondary-color: #2c3e50; /* Dark Corporate Blue */
+    --background-light: #f5f7fa; /* Cool Gray/Soft White */
+    --text-dark: #333;
+    --text-light: #fff;
+    --border-color: #e0e6ed;
+    --success-color: #4CAF50; /* Subtle Success Green */
+    --warning-color: #f39c12; /* Yellow/Orange for Pending */
+}
+
+.applied-jobs-container {
+    padding: 3% 5%;
+    background-color: var(--background-light);
+    min-height: 80vh; /* Ensure it looks good even with few jobs */
+}
+
+    /* Page Title */
+    .applied-jobs-container h2 {
+        color: var(--secondary-color);
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 10px;
+    }
+
+/* Individual Job Card Style */
+.applied-job-item {
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: var(--text-light);
+    border-left: 5px solid var(--primary-color); /* Highlight with primary color */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+    .applied-job-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Job Title */
+    .applied-job-item h3 {
+        color: var(--primary-color);
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    /* Paragraph Text (Date/Status) */
+    .applied-job-item p {
+        margin: 5px 0;
+        font-size: 0.95rem;
+        color: var(--text-dark);
+    }
+
+        /* Status Label Styling (Dynamic Color based on content) */
+        .applied-job-item p strong {
+            color: var(--secondary-color);
+        }
+
+    /* Styling the HR separator */
+    .applied-job-item hr {
+        margin-top: 15px;
+        border: none;
+        border-top: 1px dashed var(--border-color);
+    }
+
+/* General Messages (Login Prompt / No Records) */
+.applied-jobs-container > .asp-literal p {
+    padding: 20px;
+    background-color: #fff3cd; /* Light warning background */
+    border: 1px solid #ffe082;
+    color: #856404; /* Dark text */
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Status color overrides (You might need custom C# logic for full automation) */
+/* Example for Manual Status Styling in a real project:
+   The ASP:Label would need a unique ID or class if you wanted to target specific text content (e.g., 'Pending', 'Accepted')
+   But for now, we'll keep the basic look.
+*/

@@ -1,0 +1,134 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HomePage.Master.cs" Inherits="practiceAWDPracticals.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>BSC-IT Portal</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    :root {
+        --primary-color: #008080; 
+        --secondary-color: #2c3e50; 
+        --background-light: #f5f7fa; 
+        --text-dark: #333;
+        --text-light: #fff;
+        --border-color: #e0e6ed;
+        --accent-color: #4CAF50; 
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    body {
+        background-color: var(--background-light);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #form1, div { 
+        flex-grow: 1; 
+    }
+
+    .tech-stack {
+        background-color: var(--secondary-color);
+        color: var(--text-light);
+        font-size: 0.85rem;
+        text-align: center;
+        padding: 4px 0;
+    }
+    header {
+        background-color: var(--text-light);
+        padding: 1rem 5%;
+        border-bottom: 2px solid var(--primary-color);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    header, nav, ul, li, a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-decoration: none;
+        list-style: none;
+        font-size: initial;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        font-family: "Epunda Slab", serif;
+    }
+
+    ul {
+        gap: 3rem;
+        margin: 0;
+    }
+
+    li a {
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--secondary-color);
+        padding: 5px 0;
+        transition: color 0.3s, border-bottom 0.3s;
+    }
+
+    li a:hover {
+        color: var(--primary-color);
+        border-bottom: 2px solid var(--primary-color);
+    }
+    
+    footer {
+        padding: 1.5rem;
+        text-align: center;
+        background-color: var(--secondary-color);
+        color: var(--border-color);
+        margin-top: auto;
+        font-size: 0.9rem;
+    }
+</style>
+</head>
+<body>
+    <h5 runat="server" class="tech-stack">Welcome to TechStack Portal</h5>
+    <form id="form1" runat="server">
+        <div>
+            <header runat="server">
+                <h1 runat="server">Bsc-IT Job Portal</h1>
+
+                <nav runat="server">
+                    <ul runat="server">
+                        <li runat="server">
+                            <a href="~/html code/home.aspx" runat="server">Home</a>
+                        </li>
+                        <li runat="server">
+                            <a href="~/html code/resume.aspx" runat="server">Resume</a>
+                        </li>
+                        <li runat="server">
+                            <a href="~/html code/AppliedJob.aspx" runat="server">Applied Job's</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer>
+            &copy All right are reserved - Bsc-IT.com 2025
+        </footer>
+    </form>
+</body>
+</html>
