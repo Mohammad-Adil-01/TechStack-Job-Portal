@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\applied.css" />
+    <Content Include="html code\adminPanel.aspx" />
     <Content Include="html code\AppliedJob.aspx" />
     <Content Include="App_Data\jobDatabase.mdf" />
     <Content Include="App_Data\jobDatabase_log.ldf">
@@ -82,6 +83,13 @@
     <Content Include="html code\Category.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="html code\adminPanel.aspx.cs">
+      <DependentUpon>adminPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html code\adminPanel.aspx.designer.cs">
+      <DependentUpon>adminPanel.aspx</DependentUpon>
+    </Compile>
     <Compile Include="html code\AppliedJob.aspx.cs">
       <DependentUpon>AppliedJob.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
